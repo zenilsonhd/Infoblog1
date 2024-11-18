@@ -1,0 +1,496 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333; /* Cor de texto padrão */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave entre modos */
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* Estilo do botão de Modo Escuro */
+#dark-mode-toggle {
+    padding: 5px 5px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    top: -10px;
+    right: 250px;
+    top: 3px;
+
+}
+
+#dark-mode-toggle:hover {
+    background-color: #5100ff;
+}
+
+/* Estilo para os banners rotativos */
+#banner {
+    width: 100%;
+    height: 60vh; 
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.banner-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.banner-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-slide a img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.banner-slide a img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    cursor: pointer;
+}
+/* Estilo para os botões de navegação */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#prev-slide {
+    left: 20px;
+}
+
+#next-slide {
+    right: 20px;
+}
+
+/* Efeito de hover para os botões */
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.2); /* Aumenta o tamanho do botão ao passar o mouse */
+}
+
+/* Efeito de foco para acessibilidade */
+.nav-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Efeito de transição suave para as setas */
+.prev-button, .next-button {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+
+
+/* Seção de Destaques */
+#destaques {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+body.dark-mode #destaques {
+    background-color: #1e1e1e; /* Fundo mais escuro para o modo escuro */
+}
+
+.artigo {
+    margin-bottom: 15px;
+}
+
+.artigo h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.artigo p {
+    font-size: 14px;
+    color: #555;
+}
+
+body.dark-mode .artigo h3 {
+    color: #f5f5f5;
+}
+
+body.dark-mode .artigo p {
+    color: #cccccc;
+}
+
+/* Seção de Artigos Recentes */
+#artigos-recentes {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+body.dark-mode #artigos-recentes {
+    background-color: #1e1e1e;
+}
+
+#artigos-recentes .artigo {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+#artigos-recentes .artigo:last-child {
+    border-bottom: none;
+}
+
+body.dark-mode #artigos-recentes .artigo {
+    border-bottom: 1px solid #333;
+}
+
+/* Link */
+a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #5a1044;
+}
+
+/* Seção de Artigos Populares */
+.popular {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+body.dark-mode .popular {
+    background-color: #1e1e1e;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.popular h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .popular h2 {
+    color: #f5f5f5;
+}
+
+/* Artigos */
+.artigo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.artigo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.artigo h3 {
+    color: #ff0000;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.artigo p {
+    color: #555;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.artigo a img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.artigo a img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Barra de navegação */
+.navbar {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Barra de pesquisa */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.search-button {
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #e6e6e6;
+}
+
+/* Seções de artigos */
+.articles {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+body.dark-mode .articles {
+    background-color: #181818;
+}
+
+.article {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .article {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Categorias e Tags */
+.category {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.tags {
+    margin-top: 10px;
+}
+
+.tag {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 10px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .search-form {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .search-button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    #banner {
+        height: 40vh;
+    }
+}
+.navbar .search-form {
+    position: absolute;
+    top: 50; /* Abaixo do botão de Dark Mode */
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+/* Seção de compartilhamento */
+#compartilhar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+body.dark-mode #compartilhar {
+    background-color: #181818;
+}
+
+#compartilhar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+body.dark-mode #compartilhar h2 {
+    color: #f5f5f5;
+}
+
+.social-share {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-share a {
+    display: inline-block;
+}
+
+.social-share img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-share img:hover {
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color
+
+
+    .banner-container {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    
+    .banner-slide {
+        min-width: 100%;
+        height: 300px;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    #prev-slide {
+        left: 10px;
+    }
+    
+    #next-slide {
+        right: 10px;
+    }
+}

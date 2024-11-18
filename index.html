@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoBlog</title>
+    <link rel="stylesheet" href="paginicial.css">
+    <script src="rotatebanner.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Notícias</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="sobre.html">Sobre</a></li> 
+        </ul>
+        <form class="search-form" action="#" method="GET">
+            <input 
+                type="text" 
+                class="search-input" 
+                placeholder="Pesquisar..." 
+                name="q" 
+                aria-label="Pesquisar no site">
+            <button type="submit" class="search-button" aria-label="Pesquisar">
+                🔍
+            </button>
+        </form>
+        <button id="dark-mode-toggle">🌙</button>
+    </nav>
+    
+    <section id="banner">
+        <div class="banner-container">
+            <div class="banner-slide">
+                <a href="verdecidade.html">
+                    <img src="imagens/banner1.png" alt="Imagem sobre energias renováveis">
+                </a>
+            </div>
+            <div class="banner-slide">
+                <a href="restaurante.html">
+                    <img src="imagens/banner2.png" alt="Imagem sobre inteligência artificial">
+                </a>
+            </div>
+            <div class="banner-slide">
+                <a href="xique-xique.html">
+                    <img src="imagens/banner3.png" alt="Imagem sobre startups brasileiras">
+                </a>
+            </div>
+        </div>
+        <button id="prev-slide" class="nav-button prev-button">&#10094;</button>
+        <button id="next-slide" class="nav-button next-button">&#10095;</button>    
+    </section>
+
+    <!-- Seção de Destaques -->
+    <section id="destaques">
+        <h2>Destaques</h2>
+        <div class="artigo">
+            <h3><a href="Energia.html">O Futuro das Energias Renováveis no Brasil: Avanços e Desafios</a></h3>
+            <p>Este artigo explora as tendências e inovações no setor de energias renováveis no Brasil, destacando a importância de fontes como a energia solar e eólica para a transição energética. Aborda avanços tecnológicos recentes, políticas governamentais de incentivo e os principais desafios enfrentados, como a necessidade de infraestrutura adequada e de investimento em capacitação profissional. A matéria também analisa o impacto ambiental e econômico positivo dessas fontes de energia, enfatizando como o Brasil pode se tornar um líder global no setor.</p>
+        </div>
+        <div class="artigo">
+            <h3><a href="inteligencia.html">Inteligência Artificial e o Mercado de Trabalho: Oportunidades e Riscos</a></h3>
+            <p>O artigo discute como a inteligência artificial (IA) está transformando o mercado de trabalho, criando novas oportunidades de emprego em áreas como análise de dados, programação e automação, mas também ameaçando certas funções com automação. Aborda as mudanças nas habilidades exigidas e a importância da adaptação dos trabalhadores e empresas para essa nova realidade. Por fim, o artigo considera a importância de políticas públicas que promovam a inclusão digital e a requalificação profissional para reduzir os impactos negativos da IA sobre o emprego.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Artigos Populares -->
+    <section class="popular">
+        <h2>Populares</h2>
+        <div class="artigo">
+            <a href="startup.html">
+            <img src="imagens/artigo1.png" alt="Imagem do artigo 1 sobre fintechs"></a>
+            <h3><a href="startup.html">Novas Startups Brasileiras Prometem Revolucionar o Mercado de Fintechs</a></h3>
+            <p>Este artigo aborda como várias startups brasileiras de tecnologia financeira estão ganhando destaque, oferecendo soluções inovadoras e práticas para clientes e empresas.</p>
+        </div>
+        <div class="artigo">
+            <a href="cerrado.html">
+            <img src="imagens/artigo2.png" alt="Imagem do artigo 2 sobre o cerrado brasileiro"></a>
+            <h3><a href="cerrado.html">Documentário Sobre o Cerrado Brasileiro Ganha Prêmio Internacional</a></h3>
+            <p>Um documentário sobre o cerrado brasileiro é premiado em um festival internacional, trazendo visibilidade para a preservação ambiental e a cultura regional.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Compartilhamento -->
+    <section id="compartilhar">
+        <h2>Compartilhe</h2>
+        <div class="social-share">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.infoblog.com.br" target="_blank" aria-label="Compartilhar no Facebook">
+                <img src="imagens/face.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=http://www.infoblog.com.br&text=Confira este artigo!" target="_blank" aria-label="Compartilhar no Twitter">
+                <img src="imagens/twiter.png" alt="Twitter">
+            </a>
+            <a href="https://api.whatsapp.com/send?text=http://www.infoblog.com.br" target="_blank" aria-label="Compartilhar no WhatsApp">
+                <img src="imagens/zap.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.infoblog.com.br&title=Compartilhe&summary=Confira este artigo" target="_blank" aria-label="Compartilhar no LinkedIn">
+                <img src="imagens/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 InfoBlog. Todos os direitos reservados.</p>
+    </footer>
+
+      
+</body>
+</html>
